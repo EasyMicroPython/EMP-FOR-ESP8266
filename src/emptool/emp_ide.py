@@ -38,10 +38,10 @@ def tree(path='/'):
 @emp_sender
 def get_code(filename):
     gc.collect()
-    with open(filename, 'r') as f:
-        code = f.read()
-        rsp = {'func': 'get_code', 'data': dict(code=code, filename=filename)}
+    with open(filename, 'r') as f:       
+        rsp = {'func': 'get_code', 'data': dict(code=f.read(), filename=filename)}
         memory_status()
+        gc.collect()
         return rsp
 
 

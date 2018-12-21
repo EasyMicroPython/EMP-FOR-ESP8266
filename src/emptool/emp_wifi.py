@@ -146,9 +146,9 @@ class NetWorker():
             
     def scan(self):
         def _list_wifi(index, essid, dbm):
-            _index = ('[%s]' % str(index)).center(8).lstrip()
+            _index = ('[%s]' % str(index)).lstrip()
             _essid = rainbow(essid + (40 - len(essid)) * ' ',color='red')
-            _dbm = rainbow(dbm.center(10).lstrip(),color='blue')
+            _dbm = rainbow(dbm.lstrip(),color='blue')
             print('{0} {1} {2} dBm'.format(_index, _essid, _dbm))
         # TODO 字符编码容错
 

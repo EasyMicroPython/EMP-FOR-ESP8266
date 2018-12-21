@@ -102,8 +102,11 @@ class WebREPL():
 
 
 def emp_sender(func):
-    def wrapper(*args, **kwargs):     
-        rsp = func(*args, **kwargs)
-        WebREPL.send(json.dumps(rsp) + '\n\r')
+    def wrapper(*args, **kwargs):
+        gc.collect()
+        print(gc.mem_free())     
+        rsp = json.dumps(func(*args, **kwargs))
+        gc.collect()
+        WebREPL.send(rsp + '\n\r')
         gc.collect()
     return wrapper

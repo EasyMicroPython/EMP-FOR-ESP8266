@@ -1,12 +1,20 @@
 from distutils.core import setup
 
 setup(
-    name = 'emp-webrepl',      
-    version = '0.0.1',
-    # py_modules = ['emp_wifi','emp_boot','emp_ide','emp_utils','emp_webrepl'],
-    py_modules = ['emp_webrepl'],
-    author = 'fuermohao@1zlab.com',        
-    author_email = 'fuermohao@outlook.com',
-    url = 'http://emp.1zlab.com',
-    description = 'EMP(Easy MicroPython) is a upy module to make things Easy on MicroPython.'   
-    )
+    name='emptool',
+    version='0.0.1',
+    packages=['emptool'],
+    include_package_data=True,
+    license='MIT License',
+    description='Easy MicroPython toolchain',
+    url='https://github.com/Easy-MicroPython',
+    author='Fuermohao',
+    author_email='Fuermohao@outlook.com',
+    platforms='Linux,Unix,Windows',
+    keywords='EasyMicroPython EMP 1ZLAB',
+    entry_points={
+        'console_scripts': [
+            'emptool = emptool.emptool:cli'
+        ]
+    }
+)

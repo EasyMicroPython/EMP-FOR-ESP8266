@@ -75,12 +75,10 @@ def print_right_just(output, length):
 
 
 def print_as_a_list_item(index, title, subtile=None):
-    try:
-        index = ('[%s]' % str(index)).center(8).lstrip()
-    except:
-        # esp8266 don't support center
-        index = '[%s]' % str(index)
-        index = index + (8-len(index)) * ' '
+    
+    # esp8266 don't support center
+    index = '[%s]' % str(index)
+    index = index + (8-len(index)) * ' '
 
     title = print_left_just(rainbow(title, color='green'))
     if subtile:
