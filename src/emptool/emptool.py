@@ -327,14 +327,13 @@ def put(pyb, filename):
 
 def cli():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    modules = ['emp_ide.py', 'emp_wifi.py', 'placeholder.py',
+    modules = ['emp_ide.py', 'emp_wifi.py',
                'emp_boot.py', 'emp_webrepl.py', 'emp_utils.py']
 
     for module in modules:
         print('\033[1;34m [emptool] sending %s ...\033[0m' % module)
         put(Pyboard(sys.argv[1]), os.path.join(BASE_DIR, module))
         print('\033[1;32m [emptool] %s uploaded! \033[0m' % module)
-
 
 
 if __name__ == "__main__":

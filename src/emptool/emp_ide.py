@@ -3,6 +3,7 @@ import json
 import gc
 import sys
 from emp_webrepl import emp_sender
+from emp_webrepl import WebREPL
 from emp_utils import is_folder
 from emp_utils import traverse
 
@@ -35,14 +36,9 @@ def tree(path='/'):
     return {'func': 'tree', 'data': traverse(path)}
 
 
-@emp_sender
 def get_code(filename):
-    gc.collect()
-    with open(filename, 'r') as f:       
-        rsp = {'func': 'get_code', 'data': dict(code=f.read(), filename=filename)}
-        memory_status()
-        gc.collect()
-        return rsp
+    # for 8266 this function is useless
+    pass
 
 
 def new_folder(folder):

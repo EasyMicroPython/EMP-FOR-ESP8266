@@ -22,8 +22,6 @@ from emp_utils import webrepl_pass
 from emp_utils import post_ip
 
 if __name__ == '__main__':
-    with open('placeholder.py') as f:
-        code = f.read()
     Wifi.connect()
     try:
         post_ip(Wifi.ifconfig()[0][0])
