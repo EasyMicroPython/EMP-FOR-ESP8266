@@ -1,4 +1,5 @@
 # EMP FOR ESP8266
+[中文文档](./README_CN.md)
 
 Due to the lack of memory in ESP8266, it always fails when using upip for installation. To this end, we created the EMP-FOR-ESP8266 compatibility solution.
 
@@ -71,4 +72,5 @@ WebREPL started.
 ## Contact Us
 When you find any bugs during use, please help us improve this project in ISSUE.
 Or you have any idea to communicate with us 1ZLAB, please email:
+
 Fuermohao@outlook.com
