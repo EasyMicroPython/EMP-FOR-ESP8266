@@ -105,7 +105,6 @@ def emp_sender(func):
     def wrapper(*args, **kwargs):
         gc.collect()
         rsp = json.dumps(func(*args, **kwargs))
-        gc.collect()
         WebREPL.send(rsp + '\n\r')
         gc.collect()
     return wrapper
