@@ -1,26 +1,27 @@
 # EMP FOR ESP8266
 
-Due to the lack of memory in ESP8266, it always fails when using upip for installation. To this end, we created the EMP-FOR-ESP8266 compatibility solution.
+由于esp8266缺少内存，总是在使用upip进行安装时失败
+为此，我们创建了 EMP-FOR-ESP8266这一兼容性解决方案
 
 
-## Quick Start
+## 快速开始
 
-### Install emp-1zlab with emptool
-first of all, we need emptool
+### 使用emptool安装emp-1zlab
+首先我们需要获取到emptool
 ```sh
 pip install emptool
 ```
 
-then, use it to install the `emp-1zlab` packages that esp8266 needed:
+然后，我们使用emptool来为ESP8266安装他所需要的emp-1zlab库
 ```sh
 sudo emptool /dev/ttyUSB0  # change to your serialport
 ```
 
-Make sure that no terminal emulators occupy the REPL during this process.
+确保在此过程中你没有使用任何终端模拟器占用ESP8266的REPL
 
-### Initialize your ESP8266
+### 初始化你的ESP8266
 
-Enter to the REPL of your ESP8266:
+进入ESP8266的REPL:
 ```python
 >>> from emp_boot import set_boot_mode
 >>> set_boot_mode()
@@ -32,9 +33,8 @@ Enter to the REPL of your ESP8266:
         this mode is for developers.In this mode you can develop much easier via EMP-IDE(emp.1zlab.com)
 Please input your choice [0-2]: 
 ```
-Enter 2, then your board will be reboot.
-Don't walk away. After rebooting, please follow the prompts to select the WiFi you need to access and enter your password to link to the network.
-
+选择第二项，你的设备将重启
+不要走开，重启之后，请按照命令行提示将你的设备连接到WiFi网络。
 ```python
 [0] How_Router_Home                          -61 dBm
 [1] 501                                      -92 dBm
@@ -51,7 +51,7 @@ scaning networks...
 Which one do you want to access? [0-4]
 ```
 
-When you are properly connected to the network, you will see the following output:
+当你正确的连接到网络之后，你将看到类似如下的输出：
 ```python
 connecting to network...
 You are connected to How_Router_Home
@@ -68,7 +68,12 @@ WebREPL daemon started on ws://192.168.0.121:8266
 WebREPL started.
 ```
 
-## Contact Us
-When you find any bugs during use, please help us improve this project in ISSUE.
-Or you have any idea to communicate with us 1ZLAB, please email:
+现在你便可以开始访问
+<http://emp.1zlab.com>
+来使用我们的EMP-IDE了。
+
+
+## 联系我们
+当你使用过程中有遇到任何的BUG，欢迎在ISSUE中帮助我们完善此项目。
+或者你有任何的想法想与我们1ZLAB进行交流合作，请邮件：
 Fuermohao@outlook.com
