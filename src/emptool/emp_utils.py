@@ -100,7 +100,7 @@ def selection(hint, range):
 
 def mem_analyze(func):
     """
-    装饰器:内存分析
+    mem_analyze
     """
 
     def wrapper(*args, **kwargs):
