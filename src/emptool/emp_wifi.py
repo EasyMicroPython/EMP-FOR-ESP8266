@@ -150,7 +150,7 @@ class NetWorker():
             _essid = rainbow(essid + (40 - len(essid)) * ' ',color='red')
             _dbm = rainbow(dbm.lstrip(),color='blue')
             print('{0} {1} {2} dBm'.format(_index, _essid, _dbm))
-        # TODO 字符编码容错
+        # TODO 
 
         networks = []
         for i in self._wifi.scan():
